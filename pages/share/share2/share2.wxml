@@ -1,0 +1,25 @@
+
+<view class="navtop" >
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">圆桌发布</text>  
+</view>
+
+
+<view class="part">
+
+  <view class="title">提个问题~</view>
+  <textarea class="titlepart1" style="border-bottom:1rpx solid  #bebebe;background:rgb(245,245,245, 0.5); padding-bottom:30px;width:100%" maxlength="5000"   placeholder="输入标题" bindinput="title" value="{{title}}" auto-focus auto-height></textarea> 
+
+
+
+  <view class="title" style="">问题描述~</view>
+  <textarea class="titlepart" style="height:250px " placeholder="对问题进行补充（选填）" bindinput="content" value="{{content}}"  cols="100"
+   rows="20" style="height:150px;overflow:auto;line-height:5px;text-overflow:ellipsis;word-wrap:break-word;" ></textarea>
+  
+  <button bindtap="send" >发布问题</button>
+</view>
+
+
+
+
+

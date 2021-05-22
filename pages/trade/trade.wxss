@@ -1,0 +1,151 @@
+/* pages/trade/trade.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.navtop{
+  width: 100%;
+  height: 35px;
+  padding-top: 32px;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 100;
+ background:rgba(155, 149, 201,0.5);
+  
+}
+
+.navtext{
+  position: absolute;
+  width: 100%;
+  margin-left: 120px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: monospace;
+  
+}
+
+.part{
+  padding-top: 67px;
+  width: 100%;
+/*  height:100% ;*/
+  
+ 
+}
+
+.search {
+  position:absolute;
+  top: 87px;
+  left: 25rpx;
+  width: 700rpx;
+  height: 66rpx;
+  display: block;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.search  {
+  display: block;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e3e3e3;
+  width: 700rpx;
+  height: 66rpx;
+  border-radius: 30rpx;
+  padding-left: 32rpx; 
+  z-index: 10;
+  position: absolute;
+}
+.search image {
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 16rpx;
+  right: 32rpx;
+  z-index: 10;
+}
+
+
+.swipers {
+  width: 100%;
+  height: 280rpx;
+  position: absolute;  
+  z-index: 1;
+ 
+}
+.swiper1 swiper{
+  width: 100%;
+  height: 280rpx;
+  
+}
+.swiper1 image {
+  width: 100%;
+  height:280rpx;
+}
+.line{
+  width: 100%;
+  height: 10px ;
+  background: #9b95c9 ;
+  z-index: 10;
+  position: absolute;
+  top:207px;
+  opacity: 0.5;
+}
+.sort{
+  top: 217px;
+  width: 100%;
+ 
+
+  z-index: 10;
+ position: absolute;
+ 
+}
+
+.active{
+  color: #9b95c9;
+  border-bottom: #9b95c9 solid 1px ;
+  width: 40px;
+}
+
+.booklist{
+  margin-top:193px;
+ 
+  width: 100%;
+
+}
+.list_item{
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+ /* border-bottom: #aaa 1px solid; */
+ margin: 10px;
+ border-bottom: 1px solid #eee;
+ box-shadow: 0 2px 5px #eeeeee;
+ 
+}
+
+.title{
+  font-size: 20px;
+  margin-bottom: 8px;
+
+}
+.price{
+  color: red;
+}
+.num{
+  color: #aaa;
+  font-size: 16px;
+}
+.float_fabu{
+  
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  opacity: 0.5;
+}

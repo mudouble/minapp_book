@@ -1,0 +1,75 @@
+/* pages/my/make/make.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.navtop{
+  width: 100%;
+  height: 35px;
+  padding-top: 32px;
+  display:flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 100;
+  border-radius: 0 0 10% 10%;
+/*  background:	#9b95c9;*/
+}
+
+.navtext{
+  position: absolute;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: monospace;
+  left: 25px;
+  top: 29px;
+}
+.navimg{
+  width: 14px;
+  height: 14px;
+  padding-left: 10px;
+}
+.p1{
+
+  height: 430px;
+margin: 10px;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+}
+.p2{
+
+  border-bottom: #aaa solid 2px;
+}
+.ptitle{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.pconten{
+  display: -webkit-box;
+  font-size: 16px;
+  color: #aaa;
+  letter-spacing: 1rpx;
+  line-height: 40rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.pwarn{
+  margin-left: 250px;
+  color: blue;
+  font-size: 20px;
+}

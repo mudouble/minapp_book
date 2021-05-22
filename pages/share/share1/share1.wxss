@@ -1,0 +1,232 @@
+.parts{
+  width: 100%;
+  height: auto;
+  margin-top:67px;
+  
+}
+.part1{
+  width: 100%;
+  position: fixed;
+  height: 61px;
+  display: flex;
+  flex-direction: column;
+  border-bottom:solid 5px #aaa;
+  background: white;
+  z-index: 10;
+  
+}
+.part1_title{
+  padding:10rpx 0 0 ;
+  margin-bottom: 10px;
+}
+.part1_title_text{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 10px;
+  background: white;
+}
+
+
+.part1_samll_text{
+  font-size: 24rpx;
+  color: #5b5b5b;
+  margin-left: 10px;
+ 
+}
+.seprate{
+  padding-top: 60px;
+}
+.part2{
+  
+  padding: 10rpx;
+}
+
+.part21{
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.part21imgs{
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.part21text{
+  font-size: 28rpx;
+}
+
+.bottompart{
+ /* position: fixed;
+  bottom: 0;*/
+  height: 40rpx;
+  border-bottom: solid 1px #ebebeb;
+  background: #ffffff;
+  width: 670rpx;
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.item{
+ /* flex: 1;*/
+  /*display: inline-block;*/
+  height: 30rpx;
+ /* border: solid 1px #d1d1d1;*/
+  border-radius: 3px;
+  padding: 0 8rpx;
+ display: inline-block;
+ 
+}
+
+.img{
+  display: inline-block;
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+ /* padding: 0 10rpx;*/
+}
+.num{
+  display: inline-block;
+  padding: 10rpx 4rpx;
+  color: #aaa;
+}
+.part3{
+  padding:10rpx 10rpx 0 10rpx;
+}
+.part3_text{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #696969;
+  padding: 10rpx;
+  text-indent: 20rpx;
+  text-align: left;
+}
+.part3_samll{
+  font-size: 24rpx;
+  color:#aaa;
+}
+
+/*遮罩层 */  
+.shade{   
+  width:100%;   
+  height:100%;   
+  top:0;   
+  background:rgba(0,0,0,0.5);   
+  overflow: hidden;   
+  /*要显示在wrap的上面 */   
+  z-index: 20;   
+  position: absolute;  
+  }   
+  
+/*显示与隐藏的内容即点击核算后所展示的详细内容 */  
+.conts{   
+  width: 100%;   
+  height: 100%;   
+  background-color: #F5F5F5;   
+  position: fixed;   
+  top: 200rpx;   
+  text-indent: 60rpx;  
+  border-radius: 2% 2% 0 0 ;
+  }  
+    
+/*显示整个conts */  
+.show{   
+  display: block;  
+  }  
+/*隐藏整个conts */  
+.hide{   
+  display: none;  
+  }  
+  
+/*关闭按钮（关闭整个conts） */  
+.closeImg{   
+  width: 50rpx;   
+  height: 50rpx;   
+  float: left;   
+  position: relative;   
+  top: 10rpx;   
+    
+  background-color: white;   
+  
+  }  
+
+  .remark_title{
+    display: inline-block;
+    position: relative;       
+  }
+
+  .remark_line{
+    margin-top: 10px;
+    background: #aaa;
+    height: 5px;
+    width: 100%;
+  }
+
+  .remarkpart{
+    display: flex;
+    flex-direction: row;
+      height: 60px;
+    border-bottom: solid 1px #aaa;
+    margin-right: 10px;
+  }
+  .remark_content{
+    margin-top:10px;
+    margin-bottom:10px;margin-left:-15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .content{
+    position: relative;
+    margin:10px
+  }
+  .touxiang{
+    position: relative;
+    left: -40rpx;
+    top: 10px;
+    width: 80rpx;
+    height: 80rpx;
+  border-radius: 50%;
+    margin-right: 10rpx;
+
+  }
+  .remark_bottom{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .remarks{
+    border-bottom: solid 1px #aaa;
+
+  }
+
+  .input{
+    /* margin: 10px; */
+    border: solid 1px #aaa;
+    border-radius: 1%;
+   position:fixed;
+   bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 100%;
+  }
+  .sub{
+     /* height: 30px; */
+   width: 50px;  
+   position: absolute;
+   right: 0px;
+   background: rgba(155, 149, 201,0.5);
+   /* box-shadow: lightgray; */
+  }
+
+.in{
+/* align-items: center; */
+text-align: left;
+}

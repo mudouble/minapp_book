@@ -1,0 +1,261 @@
+/* pages/trade/fabu/fabu.wxss */
+/* pages/trade/trade.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.navtop{
+  width: 100%;
+  height: 35px;
+  padding-top: 32px;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 100;
+
+  border-radius:0 0 10% 10% ;
+}
+
+.navtext{
+  position: absolute;
+  width: 100%;
+  left: 25px;
+  top: 29px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: monospace;
+  
+}
+.navimg{
+  width: 14px;
+  height: 14px;
+  padding-left: 10px;
+
+}
+
+.part{
+  padding-top: 67px;
+  width: 100%;
+  height:100% ;
+ 
+}
+page {
+  background-color: #f1f1f1;
+}
+ 
+.title {
+  margin-top: 5rpx;
+  background-color: white;
+  width: 100%;
+  height: 80rpx;
+}
+ 
+.title_text {
+  margin-left: 20rpx;
+  width: 100%;
+  height: 50rpx;
+  padding-top: 10rpx;
+  display: flex;
+}
+ 
+.title_text text {
+  font-size: 30rpx;
+}
+ 
+.title_text input {
+  font-size: 30rpx;
+  width: 60vw;
+  margin-left: 20rpx;
+  font-family: monospace;
+  font-weight: bold;
+}
+ 
+.textarea {
+  height: 100rpx;
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  width: 500rpx;
+  font-family: monospace;
+  font-weight: bold;
+}
+ 
+.info-point {
+  background-color: white;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 5rpx;
+}
+ 
+/*选择图片View*/
+ 
+.addImv {
+  background-color: white;
+  /* border: 1px dashed gray; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 5rpx;
+}
+ 
+.upImv {
+  background-color: white;
+  width: 100%;
+  margin-top: 5rpx;
+}
+ 
+.upImv_text {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+}
+ 
+/*添加图片*/
+ 
+.addImv .chooseView {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx 20rpx;
+  background-color: #f2f6f9;
+  border: 1px dashed lightgray;
+  text-align: center;
+  line-height: 180rpx;
+  /* padding: 0rpx 7rpx; */
+  border-radius: 5px;
+  margin-left: 40rpx;
+}
+ 
+.addImv .chooseImv {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.addImv .chooseImv image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+/*已选择的图片*/
+ 
+.addImv .upFile {
+  width: 180rpx;
+  height: 180rpx;
+  position: relative;
+  padding: 0rpx 7rpx;
+  margin-left: 40rpx;
+  border: 1px solid #c0ccda;
+}
+ 
+.addImv .upFile .itemImv {
+  width: 180rpx;
+  height: 180rpx;
+  padding: 0rpx 7rpx;
+}
+ 
+.addImv .upFile .closeImv {
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+ 
+.sureRelease {
+  background-color: rgba(155, 149, 201,0.9);
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+
+.btn{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+ .radio{
+   width: 10px;
+   height: 10px;
+ }
+
+picker-view .btns {
+  width: 100%;
+  height: 100rpx;
+  color: #baa076;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+picker-view .btns view {
+  width: 20%;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+picker-view {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+  border-radius: 30rpx 30rpx 0 0;
+  z-index: 999;
+}
+
+/* // 添加弹出的过渡动画 */
+picker-view.show {
+  height: 36%;
+  transition: all 0.4s;
+}
+
+/* // 设置单列数据的样式 */
+picker-view-column {
+  border-radius: 30rpx 30rpx 0 0;
+  color: #B8B8B8;
+  font-size: 32rpx;
+  margin-top: 47rpx;
+}
+
+/* // 设置选中框的样式 */
+.pickerCol {
+  width: 100%;
+  height: 50rpx;
+  color: #baa076;
+  border-top: 1px solid #f2f3f5;
+  border-bottom: 1px solid #f2f3f5;
+}
+
+/* // 添加前面的三角形 */
+.pickerCol::before {
+  width: 10rpx; 
+  height: 28rpx;
+  position: absolute;
+  left: 200rpx;
+  top: 15rpx;
+  background-image: url(//demo.17weiju.com/wxsh/wxsh/image/food-sjx.png);
+  background-size: 100% 100%;
+}
+
+/* // 这里的两个伪类有默认样式（两条线），但是介于我已经重写了before，这里就取消after的显示 */
+.pickerCol::after {
+  display: none;
+}
+
+/* // 自定义选中的时候字体颜色和大小 */
+.pick-text {
+  color: #baa076;
+  font-size: 34rpx;
+}
+.t{
+  color	:#7D26CD;
+}

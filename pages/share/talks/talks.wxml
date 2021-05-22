@@ -1,0 +1,16 @@
+<!--pages/share/talks/talks.wxml-->
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">返回</text>  
+</view>
+
+
+<view class="title" >  
+    <text class="titletext">{{title}}</text> 
+</view>
+<view class="content">
+    <textarea class="contenttext" placeholder="畅所欲言吧~" value="{{contenttext}}" bindinput="content"></textarea>
+</view>
+<view class="fabiao">
+ <button bindtap="send" id="{{item._id}}"  style="background: rgba(155, 149, 201,0.5);width;100%">发表</button>
+</view>

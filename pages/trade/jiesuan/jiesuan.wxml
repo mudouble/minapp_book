@@ -1,0 +1,76 @@
+<view class="navtop" bindtap="back" >
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" >确认订单</text>  
+</view>
+
+<view class="part">
+<view class="list-text">
+  <text>商品列表</text>
+</view>
+<view wx:if="{{cartItems!=[]}}">
+  <view class="list-goods"wx:for="{{cartItems}}">
+     <image class="pic-goods" src="{{item.images}}"></image>
+     <text class="title-goods">《 {{item.title}} 》</text>
+     <text class="price-goods">¥ {{item.price}}</text>
+     <text class="amount-goods">✘ {{item.value}}</text>
+  </view>
+</view>
+<view class="deliver">
+  <view style="display:flex;flex-direction:row">
+    <view class="service">取货方式: </view>
+     <radio-group class="radio" style="display:flex;flex-direction:row;" bindchange="radioChange" >
+       <view wx:for="{{loves}}">
+         <radio value="{{item.id}}" checked="{{item.checked}}" >{{item.name}}</radio>
+       </view>
+     </radio-group>
+    
+  </view>
+  <view class="time-select" style="display:flex;flex-direction: column;">
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="dates">
+      <text>取货日期：{{date}}</text>
+    </picker>
+    <picker mode="time" value="{{time}}" start="06:01" end="24:01" bindchange="times">
+      <text>取货时间 {{time}}</text>
+    </picker>
+  </view>
+</view>
+
+<view class="hr"></view>
+<view class="remark">
+   <view>备注</view>
+   <input placeholder="选填：给卖家备注" auto-focus></input>
+</view>
+<view class="cost-one">
+  <text class="left" style=" float:left;font-size: 30rpx;padding-left: 32rpx;">书籍价格</text>
+  <text class="right" style=" float:right;color: #f00;font-size:32rpx;padding-right: 22rpx;">¥ {{total}}</text>
+</view>
+<view class="cost-two">
+  <text class="left" style="  float:left;font-size: 30rpx;padding-left:32rpx ;">运费</text>
+  <text class="right" style=" float:right;color: #f00;font-size: 32rpx;padding-right:22rpx ;">+ ¥ {{yunfei}}</text>
+</view>
+<view class="cost-three">
+  <text class="left" style=" float:left;font-size: 30rpx;padding-left:32rpx;">实际付款</text>
+  <text class="right" style="float:right;color: #f00;font-size: 32rpx;padding-right:22rpx ;">¥ {{total1}}</text>
+</view>
+</view>
+<view class="bottom"  catchtap='showInputLayer'>
+  <text>微信支付</text>
+</view>
+<!-- 密码输入框 -->
+<view wx:if='{{showPayPwdInput}}'>
+    <view class='bg_layer'></view>
+    <view class='input_main'>
+        <view class='input_title'>
+            <view class='input_back' catchtap='hidePayLayer'><text></text></view>
+            <text>输入支付密码</text>
+        </view>
+        <view class='input_tip'><text>使用会员卡余额支付需要验证身份，验证通过后才可进行支付。</text></view>
+        <view class='input_row' catchtap='getFocus'>
+            <view class='pwd_item' wx:for='{{6}}' wx:key='item' wx:for-index='i'>
+                <text wx:if='{{pwdVal.length>i}}'></text>
+            </view>
+        </view>
+        <view class='forget_pwd' catchtap='hidePayLayer'>忘记密码</view>
+        <input class='input_control' password type='number' focus='{{payFocus}}' bindinput='inputPwd' maxlength='6'/>
+    </view>
+</view>

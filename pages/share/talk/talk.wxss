@@ -1,0 +1,94 @@
+/* pages/talk/talk.wxss */
+
+.navtop{
+  width: 100%;
+  height: 35px;
+  padding-top: 32px;
+  display:flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 100;
+ /* background-image: url("https://pic4.zhimg.com/80/v2-62ebd6f88d664aa7b269771644c6f233_1440w.jpg"); */
+  /* border-radius: 0 0 10% 10%; */
+  align-content: center;
+ 
+}
+
+.navtext{
+  position: absolute;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: monospace;
+  left: 30px;
+  top: 29px;
+}
+.navimg{
+  width: 14px;
+  height: 14px;
+  padding-left: 10px;
+
+}
+.top-tab{
+  top: 67px;
+  width: 750rpx;
+  height: 80rpx;
+  /* background-image: url("https://pic4.zhimg.com/80/v2-62ebd6f88d664aa7b269771644c6f233_1440w.jpg"); */
+  background:rgba(155, 149, 201,0.5);
+  color: black;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 2px #bebebe;
+  margin: 0 0 8rpx 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+}
+
+.toptab.active{
+  color: #6f60aa;
+  border-bottom: solid 2px #6f60aa;
+}
+.flex-tab{
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.flex-item{
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* .search {
+  position:absolute;
+  top: 35px;
+  left: 145rpx;
+  width: 400rpx;
+  height: 50rpx;
+  display: block;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.search input {
+  display: block;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e3e3e3;
+  width: 400rpx;
+  height: 40rpx;
+  border-radius: 30rpx;
+  padding-left: 32rpx; 
+  z-index: 10;
+  position: absolute;
+}
+.search image {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  z-index: 10;
+} */
+

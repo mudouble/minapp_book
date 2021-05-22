@@ -1,0 +1,101 @@
+<!--pages/talk/talk.wxml-->
+
+<view class="navtop" style="background:rgba(155, 149, 201,0.5);" >
+   <!-- <image src="/images/1.jpg"></image>  -->
+   <text class="navtext" style="margin-left:120px;text-align:left;font-size:16px;font-weight:bolder;font-family:monospace;">书声讨论区</text>  
+</view>
+
+<view class="top-tab flex-wrp flex-tab " >
+  <view class="toptab flex-item {{item.isActive ? 'active' : ''}}" wx:for="{{navTab}}"  data-index="{{index}}" bindtap="switchTab">
+    {{item.name}}
+  </view>
+</view>
+
+
+<scroll-view style="width:100%;margin-top:107px;">
+  <block wx:if="{{navTab[0].isActive}}">
+    <view  class="contentitem" wx:for="{{article}}" wx:key="{{index}}" bindtap="todetail" id="{{item._id}}">
+     
+      <view class="part2">
+        <view class="content">
+          <view class="question" >{{item.title}}</view>        
+        </view>
+      <view class="secondpart" >
+          <view class="part1" >
+        <view class="part1_img">
+        <open-data type="userAvatarUrl" ></open-data></view>
+        <view class="part1_text">
+         <open-data type="userNickName"></open-data></view>
+      </view>
+      <view class="content"> <view class="answer">{{item.answer[0].content}}</view></view>
+        <view class="contentaction">
+          <text class="action">{{item.answer[0].like}} 点赞  •  </text>
+          <text class="action">{{item.answer[0].comments}} 评论 • {{item.answer[0].createTime}}</text>
+        </view>
+    </view>
+      </view>
+    </view>
+  
+  </block>
+   <block wx:if="{{navTab[1].isActive}}">
+    <view  class="contentitem" wx:for="{{article_remen}}" wx:key="{{index}}" bindtap="todetail" id="{{item._id}}">
+     
+      <view class="part2">
+        <view class="content">
+          <view class="question" >{{item.title}}</view>        
+        </view>
+    <view class="secondpart" >
+       <view class="part1" >
+        <view class="part1_img">
+        <open-data type="userAvatarUrl" ></open-data></view>
+        <view class="part1_text">
+         <open-data type="userNickName"></open-data></view>
+      </view>
+      <view class="content"> <view class="answer">{{item.answer[0].content}}</view></view>
+        <view class="contentaction">
+          <text class="action">{{item.answer[0].like}} 点赞  •  </text>
+          <text class="action">{{item.answer[0].comments}} 评论 • {{item.answer[0].createTime}}</text>
+        </view>
+    </view>
+      </view>
+    </view>
+  
+  </block>
+ <block wx:if="{{navTab[2].isActive}}">
+    <view  class="contentitem" wx:for="{{artcollect}}" wx:key="{{index}}" bindtap="todetail" id="{{item._id}}">
+      <view class="part2">
+        <view class="content">
+          <view class="question" >{{item.title}}</view>        
+        </view>
+      <view class="secondpart" >
+          <view class="part1" >
+        <view class="part1_img">
+        <open-data type="userAvatarUrl" ></open-data></view>
+        <view class="part1_text">
+         <open-data type="userNickName"></open-data></view>
+      </view>
+      <view wx:for="{{item.answer}}"  wx:for-item="answer">
+      <view class="content"> <textarea class="answer">{{answer.content}}</textarea></view>
+        <view class="contentaction">
+          <text class="action">{{answer.like}} 点赞  •  </text>
+          <text class="action">{{answer.comments}} 评论 • {{answer.createTime}}</text>
+        </view></view>
+    </view>
+      </view>
+    </view>
+  
+  </block>
+</scroll-view>
+
+<view class="floatbutton" style="width:50px;height:50px;position:fixed;bottom:100px;right:30px; border-radius: 50%;background:#CCCCFF;z-index:20" bindtap="yuanzhuojump">
+  <text style="font-size:11px;color:white;padding-left:10rpx;padding-top:10rpx">创建圆桌</text>
+  <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/tianjia.png" style="width:20px;height:20px;padding-left:25rpx"></image>
+</view>
+
+
+
+
+
+
+ 
+

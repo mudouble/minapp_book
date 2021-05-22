@@ -1,0 +1,58 @@
+
+
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">我的交易</text>  
+</view>
+<!--正文内容-->
+
+<view class="top-tab flex-wrp flex-tab " >
+  <view class="toptab flex-item {{item.isActive ? 'active' : ''}}" wx:for="{{navTab}}"  data-index="{{index}}" bindtap="switchTab">
+    {{item.name}}
+  </view>
+</view>
+
+
+<scroll-view style="width:100%;margin-top:107px;">
+  <block wx:if="navTab[0].isActive">
+    <view class="contentitem" wx:for="{{goods}}" wx:if="{{bookid==ids}}" >
+      <view class="part1" style="right:0">
+        <text class="part1_deal" style="margin:0 0 0 280px">交易成功</text>
+      </view>
+      <view class="part2" style="padding:0 0 0 0" >
+      <view class="part21">
+       <image class="part21_img" src="{{item.fileIDs[0]}}" style="height:80px"></image>
+       <view class="part21_text">
+         <view class="question">{{item.title}}</view>
+         <view class="part21_price">实际付款 ¥ {{item.price}}</view></view>
+      </view>
+      <view class="part22">
+        <button class="part22_btn" bindtap="del" style="padding:0 0;">删除</button>
+      </view>
+       
+      </view>
+      
+    </view>
+  </block>
+ <block wx:if="navTab[1].isActive">
+    <view class="contentitem" wx:for="{{goods1}}" wx:if="{{bookid==ids}}" >
+      <view class="part1" style="right:0">
+        <text class="part1_deal" style="margin:0 0 0 280px">交易成功</text>
+      </view>
+      <view class="part2" style="padding:0 0 0 0" >
+      <view class="part21">
+       <image class="part21_img" src="{{item.fileIDs[0]}}}" style="height:80px"></image>
+       <view class="part21_text">
+         <view class="question">{{item.title}}</view>
+         <view class="part21_price">实际付款 ¥ {{item.price}}</view></view>
+      </view>
+      <view class="part22">
+        <button class="part22_btn"  bindtap="del" id="{{item._id}}" style="padding:0 0;">删除</button>
+      </view>
+       
+      </view>
+      
+    </view>
+  </block>
+</scroll-view>
+

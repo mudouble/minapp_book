@@ -1,0 +1,160 @@
+.part{
+  padding-top: 67px;
+}
+.list-text{
+  
+  height: 84rpx;
+  line-height: 84rpx;
+  font-size: 32rpx;
+  padding-left: 32rpx;
+}
+.list-goods{
+  position: relative;
+  padding: 10rpx 10rpx 10rpx 220rpx;
+  height: 190rpx;
+  border-bottom: 1px solid #eee9e9;
+}
+.pic-goods{
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  width: 200rpx;
+  height: 180rpx;
+}
+.title-goods{
+  display: block;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.price-goods{
+  font-size: 32rpx;
+  height: 100rpx;
+  color: #f00;
+  margin-left: 30px;
+}
+.amount-goods{
+  position: absolute;
+  right: 10rpx;
+  bottom: 20rpx;
+  width: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.deliver{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+.hr{
+  margin-top:20rpx ;
+  border: 1px solid #eee9e9;
+}
+.deliver.service{
+  font-size: 34rpx;
+  display: flex;
+  flex-direction: row;
+}
+.deliver.time{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #919191;
+}
+.time-select{
+  display: flex;
+  flex-direction: row;
+  margin-top: 42rpx;
+  margin-left: 2rpx;
+}
+.time-select text{
+  font-size: 26rpx;
+  
+}
+.remark{
+  font-size: 34rpx;
+  height: 50rpx;
+  padding:30rpx;
+}
+.remark input{
+  font-size: 28rpx;
+}
+.cost-one{
+  margin-top: 36rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.cost-two{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.cost-three{
+  height: 20rpx;
+  line-height: 20rpx;
+}
+
+.bottom{
+  width: 100%;
+  line-height: 105rpx;
+  background: #9b95c9 ;
+  /* position: fixed; */
+  bottom: 0;
+  color: white;
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 10px;
+  
+}
+/* 支付密码css start */
+.bg_layer{
+  position: fixed; left: 0; top: 0; bottom: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.6); z-index: 9998;
+}
+.input_main{
+    position: fixed; left: 0; bottom: 500rpx; width: 100%; height: 394rpx;
+    background-color: #fff; z-index: 9999;
+}
+.input_title{
+    width: 100%; height: 90rpx; line-height: 90rpx; text-align: center; 
+    font-size: 32rpx; border-bottom: 1rpx solid #e2e2e2;
+}
+.input_back{
+    position: absolute; left: 0; top: 0;
+    width: 80rpx; height: 90rpx; display: flex; justify-content: center; align-items: center;
+}
+.input_back text{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: white;
+  border: 1rpx solid #aaa;
+  border-width: 5rpx 0 0 5rpx;
+  transform: rotate(-45deg);
+}
+ 
+.input_tip{  margin: 30rpx; font-size: 24rpx; color: #888; }
+ 
+/* 密码掩码模拟 */
+.input_row{
+  width: 690rpx; margin: 0 auto; height: 98rpx; position: relative;
+  display: flex; align-items: center; border: 1rpx solid #e2e2e2; border-radius: 20rpx;
+}
+.input_row .pwd_item{
+  flex: 1; display: flex; align-items: center; justify-content: center; 
+  height: 100%; border-right: 1rpx solid #e2e2e2; position: relative;
+}
+.pwd_item:nth-last-of-type(1) { border-right: 0; } 
+.pwd_item text { 
+  width: 30rpx; height: 30rpx; border-radius: 30rpx; background-color: #555;
+}
+ 
+ 
+.forget_pwd{ 
+  float: right; margin: 30rpx; width: 100rpx; text-align: right; font-size: 24rpx; color: #ff7800;
+}
+ 
+/* 文本输入框位置: 设置到左边隐藏 */
+.input_control { 
+  position: relative; left: -300rpx; bottom: 0; width: 100rpx; height: 100rpx;
+}

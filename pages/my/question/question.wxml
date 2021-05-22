@@ -1,0 +1,7 @@
+
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">使用指南</text>  
+</view>
+
+<image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/使用指南.png" class="im"></image>

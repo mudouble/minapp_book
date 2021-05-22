@@ -1,0 +1,69 @@
+<view class="navtop" bindtap="back">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">租书</text>  
+</view>
+<view class="part">
+  <view class="mappart">
+     <swiper class="activity" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="155"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='footlist'>
+    <view class="foot-left">
+      <block wx:for="{{shu}}" >
+        <view class='footbox' catchtap='jumpdetail' id="{{item._id}}"  catchlongtap="deletefoot"  wx:if="{{index%2==0}}">
+            <image class='cover' src="{{item.fileIDs[0]}}" mode="widthFix"></image>
+            <view class='container'></view>
+        <view class="box-shadow">
+          <text class='titles'>{{item.title}}</text>
+          <view class='bot'>
+            <view class='personbox' >
+              <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/logo紫色.png"></image>   
+              <text class='prices'>¥ {{item.price}}</text>   
+                 
+            </view>    
+          
+          </view>
+        </view>
+      </view>
+
+    </block>
+  </view>
+
+  <view class="foot-right">
+    <block wx:for="{{shu}}" >
+      <view  class='footbox' catchtap='jumpdetail'  id="{{item._id}}" catchlongtap="deletefoot" bindtouchend="touchend"  wx:if="{{index%2==1}}" >
+        <image class='cover' src="{{item.fileIDs[0]}}" mode="widthFix"></image>
+        <view class="box-shadow">
+        <text class='titles'>{{item.title}}</text>
+          <view class='bot'>
+            <view class='personbox'>
+              <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/logo紫色.png"  ></image>  
+                <text class='prices'>¥ {{item.price}}</text>  
+            </view>       
+          </view>
+        </view>
+      </view>
+     
+    </block>
+  </view>
+</view>  
+</view>
+
+
+
+ <view wx:for="{{ss}}"  class="rents" hidden="{{modalHidden}}">
+        <image class="delete" bindtap="deletes" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/取消.png"></image>
+        <view class="tls" >{{item.title}}</view>
+        <image class="de_image" src="{{item.fileIDs[0]}}" mode='aspectFill'></image>     
+        <view class="item1">地点 {{item.address}}</view>
+        <view class="item1">信息 {{item.info}}</view>
+           <view class="boxxx">  <image class="likes" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/喜欢 (1).png" bindtap="praiseThis"  wx:if="{{shows == false}}" mode="widthFix" />
+      <image class="likes" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/喜欢 (2).png" bindtap="praiseThis"  wx:if="{{shows == true}}" mode="widthFix"/>
+        <button class="re" bindtap="rentbooks">先租一个月</button></view>
+</view>

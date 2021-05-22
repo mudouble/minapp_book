@@ -1,0 +1,55 @@
+
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">我的收藏</text>  
+</view>
+<view class="nav" style="z-index:13">
+ <open-data type="userAvatarUrl" style="width:100%;height:180px;z-index:0; position: absolute; filter: blur(8px); "></open-data>
+
+  <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/collect.png" style="z-index:1;position:absolute;left:10px;top:150px;width:20px;height:20px"></image>
+  <view style="z-index:1;position:absolute;left:30px;top:150px">{{list.length}} 个内容</view>
+</view>
+
+
+ <!-- wx:if="{{index%2==0}}" {{list.length}}-->
+  <view class='footlist'>
+  <view class="foot-left">
+    <block wx:for="{{list}}" >
+      <view class='footbox' catchtap='jumpdetail' catchlongtap="deletefoot" bindtouchend="touchend" wx:if="{{index%2==0}}">
+        <image class='cover' src="{{item.img}}" mode="widthFix"></image>
+        <view class="box-shadow">
+          <text class='t1'>{{item.info}}</text>
+          <view class='bot'>
+            <view class='personbox' >
+              <image src="{{item.userava}}"></image>
+              <text class="username">{{item.username}} </text>
+            </view>
+          
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+<!-- id="{{item.id}}" wx:if="{{index%2==1}}" data-cover="{{item.img}}" data-title="{{item.info}}" -->
+  <view class="foot-right">
+    <block wx:for="{{list}}" >
+      <view class='footbox' catchtap='jumpdetail' catchlongtap="deletefoot" bindtouchend="touchend"  wx:if="{{index%2==1}}" >
+        <image class='cover' src="{{item.img}}" mode="widthFix"></image>
+        <view class="box-shadow">
+          <text class='t1'>{{item.info}}</text>
+          <view class='bot'>
+            <view class='personbox'  catchtap="toProfile">
+              <image src="{{item.userava}}"></image>
+              <text class="username">{{item.username}}</text>
+            </view>
+          
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+  
+
+
+   

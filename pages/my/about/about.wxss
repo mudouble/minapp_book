@@ -1,0 +1,65 @@
+/* pages/my/about/about.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.navtop{
+  width: 100%;
+  height: 35px;
+  padding-top: 32px;
+  display:flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 100;
+  border-radius: 0 0 10% 10%;
+ /* background:	#9b95c9;*/
+}
+
+.navtext{
+  position: absolute;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: monospace;
+  left: 25px;
+  top: 29px;
+}
+.navimg{
+  width: 14px;
+  height: 14px;
+  padding-left: 10px;
+
+}
+
+.part{
+  padding-top: 67px;
+  width: 100%;
+  height:551px ;
+  display: flex;
+  flex-direction: column;
+ position: absolute;
+}
+text{
+  font-size: 16px;
+  margin:2px;
+  word-spacing: 1rpx;
+  
+}
+.texttop{
+  font-size:26px;text-align:center;margin-bottom: 10px;font-family: monospace;
+}
+.img{
+  width: 150px;
+  height: 100px;
+  /* align-items: center; */
+  left: 110px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.i{
+  margin:5px;
+  margin-left: 60px;
+}

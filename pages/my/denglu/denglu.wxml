@@ -1,0 +1,47 @@
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">统一身份认证</text>  
+</view>
+
+
+<view class="body" style="margin-top:100px">
+  <view class="img" style="margin-left:60px;margin-top:100px"><image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/logo_burned.png" style="height:50px;width:50px"></image>
+     <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/logo3.png" style="width:150px;height:40px"></image>
+  </view>
+   <text style="margin-left:140px;color:#aaa">欢迎登录</text>
+  <view class="input" style="margin-top:30px;margin-left:30px">
+  <view style="display:flex;flex-direction:row;border:1rpx #aaa solid;width:300px;height:40px;margin-bottom:20px;align-items:center">
+   <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/用户.png" style="width:20px;height:20px"></image>
+    <input placeholder="请输入电话号码" style="font-size:14px;color:black" bindinput="inputphone" ></input>
+  </view>
+
+
+   <view style="display:flex;flex-direction:row;border:1rpx #aaa solid;width:300px;height:40px;margin-bottom:20px;align-items:center">
+   <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/1_校区.png" style="width:20px;height:20px"></image>
+    <picker style="font-size:14px"  bindchange="choose" value="{{ids}}" range="{{campus}}" range-key="name"  >     
+      
+         <block wx:if="{{ids!==-1}}">| 当前所在校区选择： {{campus[ids].name}}</block>
+          <block wx:if="{{ids==-1}}">请选择您所在校区</block>
+      
+    </picker>
+   </view>
+   
+   <view style="display:flex;flex-direction:row;border:1rpx #aaa solid;width:300px;height:40px;margin-bottom:20px;align-items:center">
+   <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/宿舍号.png" style="width:20px;height:20px"></image>
+   <picker style="font-size:14px;" mode="selector" bindchange="choose1" value="{{id}}" range="{{room}}" range-key="name" >
+      
+         <block wx:if="{{id!==-1}}">| 当前所在宿舍区选择： {{room[id].name}}</block>
+         <block wx:if="{{id==-1}}">请选择您所在宿舍区</block>
+ </picker>
+   </view>
+     
+      <button style="margin-top:80px;margin-bottom:20px;margin-left:45px" open-type='getUserInfo' bindgetuserinfo="getUserInfo">注册登录</button>
+      <text style="color:#aaa;">! 请确保电话号码正确，后续将作为订单发送的联系方式</text>
+      <view></view>
+      <text style="color:#aaa">! 请用户放心，平台会保护用户的隐私信息</text>
+
+  
+  </view>
+    
+
+</view>

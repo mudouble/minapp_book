@@ -1,0 +1,127 @@
+/* pages/my/my.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.navtop{
+  width: 100%;
+  height: 35px;
+  padding-top: 32px;
+  display:flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  z-index: 100;
+  background:rgba(155, 149, 201,0.5);
+  /* border-radius: 0 0 10% 10%; */
+}
+
+.navtext{
+  position: absolute;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: monospace;
+  /* left: 25px; */
+  top: 29px;
+  margin-left: 120px;
+}
+.navimg{
+  width: 14px;
+  height: 14px;
+  padding-left: 10px;
+}
+
+.con{
+  width: 100%;
+  color: #9b95c9;
+  left: 20px;
+  position: fixed;
+  z-index: 11;
+  top:100px;
+  display: flex;
+  flex-direction: row;
+  
+ /* align-items: center;*/
+ 
+}
+
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: white 1px solid ;
+  position: relative;
+  top: 30px; 
+  display: block;
+  overflow: hidden;
+}
+.userinfo-nickname {
+  position: relative;
+  color:#6f60aa;
+  left: 80px;
+  top: 95px; 
+
+
+}
+.part2{
+ margin-top: 250px;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+
+}
+.part22{
+  margin-top: 10px;
+  width: 100%;
+  height:80px ;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+ border-top:white;
+ border-radius: 20% 20% 0 0;
+
+
+}
+
+
+.item{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row; 
+  position: relative;
+  margin-left: 5px;
+  
+}
+.img{
+width: 20px;
+height: 20px;
+margin-right: 10px;
+}
+
+
+.line{
+
+  width: 100%;
+  height: 1px;
+  background-color:#6f60aa;
+  margin-bottom: 20px;
+ 
+  
+}
+
+
+.jiantou{
+  position: absolute;
+  right: 20px;
+  width:15px;
+  height: 20px;
+
+}
+
+

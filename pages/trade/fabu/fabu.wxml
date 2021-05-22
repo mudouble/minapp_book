@@ -1,0 +1,91 @@
+
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png"  bindtap="back"></image>
+  <text class="navtext" bindtap="back">卖书/出租书</text>
+</view>
+<view class="part">
+<form bindsubmit="formSubmit">
+  <view class='title'>
+    <view class='title_text'>
+      <text class="t">*名称:</text>
+      <input name="title" type='text' bindinput="title"></input>
+    </view>
+  </view>
+   <view class='title'>
+    <view class='title_text'>
+      <text >*卖or租:</text>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio " wx:for="{{items}}" >
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</radio-group>
+    </view>
+  </view>
+
+
+  <view class='title'>
+    <view class='title_text'>
+      <text class="t">*价格/租金每月:</text>
+      <input name="price" type='number'  bindinput="price"></input>
+    </view>
+  </view>
+
+  <view class='info-point'>
+    <view class='title_text'>
+      <text >主人说:</text>
+      <textarea name="info" class='textarea' bindinput="info"></textarea>
+    </view>
+  </view>
+   <view class='info-point'>
+    <view class='title_text'>
+      <text class="t">作者:</text>
+      <textarea name="author" class='textarea' bindinput="author"></textarea>
+    </view>
+  </view>
+  
+  <view class='title'>
+    <view class='title_text'>
+      <text >类别: </text>
+      <picker mode="selector" name="sort" range="{{sort}}" range-key="name" value="{{index}}" bindchange="sort1">
+       <view name="sort" > {{sort[index].name}} </view>
+      </picker>
+    </view>
+  </view>
+
+    <view class='info-point'>
+    <view class='title_text'>
+      <text class="t">地址:</text>
+      <textarea name="author" class='textarea' bindinput="address"></textarea>
+    </view>
+  </view>
+
+  
+     
+
+ 
+
+
+ 
+
+  <!--上传图片-->
+    <view class='upImv_text t'>详情图片上传</view>
+    <view class="addImv">
+      <!--这个是已经选好的图片-->
+      <view class="upFile"wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}" style="border-radius: 5px">
+        <image class="itemImv" src="{{imgList[index]}}"></image>
+        <image class="closeImv" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/tianjia.png" mode="scaleToFill" catchtap="DelImg" data-ind="{{index}}"></image>
+      </view>
+ 
+      <!--这个是选择图片-->
+      <view class="chooseView" bindtap="chooseImage" wx:if="{{imgList.length<4}}">
+        <image class="chooseImv" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/添加图标.png"></image>
+      </view>
+    </view>
+
+  <view class="btn">
+   <button bindtap="publish" open-type="getUserInfo" bindgetuserinfo="getUserInfo"class='sureRelease'>确认发布</button>
+  </view>
+
+</form>
+</view>
+

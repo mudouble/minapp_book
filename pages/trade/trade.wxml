@@ -1,0 +1,58 @@
+
+
+
+
+<view class="navtop">
+  <text class="navtext">GXNU_书声</text>
+</view>
+
+<!--正文内容-->
+<view class="part">
+<view class="swipers">
+  <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+  <swiper-item> <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/gxnu1.jpeg" mode="aspectFill"/></swiper-item>
+  <swiper-item> <image src="https://tse1-mm.cn.bing.net/th/id/OIP._8pn2yv2S_N1WrlknQ7G9gAAAA?w=277&h=171&c=7&o=5&dpr=1.12&pid=1.7" mode="aspectFill"/></swiper-item>
+  <swiper-item> <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/gxnu2.jpg" mode="aspectFill"/></swiper-item>
+  </swiper>
+</view>
+
+
+  <view class="search" bindtap="goSearch">
+    <view  style="  padding-left: 10rpx;font-size: 28rpx; letter-spacing: 2rpx;color: rgb(167, 167, 167);z-index:11">输入搜索内容...</view>
+    <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/查找.png" ></image>
+  </view>
+<view class="line"></view>
+
+<view class="top-tab flex-wrp flex-tab " style="top:207px;position:absolute">
+  <!-- <view class="toptab flex-item {{item.isActive ? 'active' : ''}}" wx:for="{{meulist}}"  data-index="{{index}}" bindtap="changeMeulist">
+    {{item.item}} -->  
+
+    <view class=" toptab flex-item {{flag==0?'active' : ''}}" id="0" bindtap="select">推荐</view>
+    <view class=" toptab flex-item {{flag==1?'active' : ''}}" id="1" bindtap="select">通用</view>
+    <view class=" toptab flex-item {{flag==2?'active' : ''}}" id="2" bindtap="select">考研</view>
+    <view class="  toptab flex-item {{flag==3?'active' : ''}}" id="3" bindtap="select">考证</view>
+    <view class=" toptab flex-item {{flag==4?'active' : ''}}" id="4" bindtap="select">课外</view>
+ 
+</view>
+
+
+
+<view class="booklist">
+   
+     <view class="list_item" wx:for="{{shu}}" id="{{item._id}}" bindtap="booksDetail">
+     <view class="img">
+        <image src="{{item.fileIDs[0]}}" style="height:100px;width:100px;border-radius:5% 5% 5% 5% ;margin:5px" mode="scaleToFill"/>
+      </view>
+      <view class="info" style="margin-left:10px;margin-top:10px">
+        <view class="title">《{{item.title}}》</view>
+        <view class="price">￥{{item.price}}</view>
+        <view class="num">简介：{{item.info}}</view>
+      </view> 
+     </view>
+   
+ 
+ </view>
+
+</view>
+
+<view class="float_fabu" bindtap="fabu"><image style="width:50px;height:50px" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/发布 (3).png"></image></view>

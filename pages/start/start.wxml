@@ -1,0 +1,11 @@
+<!--pages/start/start.wxml-->
+<view class="part">
+<image class="img" src="/images/gxnu.jpg"></image>
+  <text class="text1">书声voice</text>
+  <text class="text2">以书会友，共听书声</text>
+ 
+</view>
+
+<view class="go">
+ <button bindtap="go">跳过{{count}}s</button>
+ </view>

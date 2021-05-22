@@ -1,0 +1,17 @@
+<!--pages/my/about/about.wxml-->
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">关于我们</text>  
+</view>
+<!--正文内容-->
+<view class="part">
+<image class="img" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/logo1.jpg" ></image>
+<text class="texttop" >GXNU_书声</text>
+<view style="text-indent:2em;letter-spacing:5rpx;background-color:rgba(155, 149, 201,0.5)">
+高校普遍存在着校园的旧书数量较多，校园二手书市场不够发达，旧书资源大量闲置浪费的现象，基于此我们团队开发微信小程序，结合微信小程序随时可用，无需安装的优点将校内旧书在小程序平台集中展示起来，便于广大学生找到所需书籍，实现资源共享和资源循环利用，同时提供平台给学生书籍阅读心得分享，激发学生的阅读兴趣。前期主要是通过小程序的开发锻炼团队成员的开发能力。
+</view>
+<text style="text-align:center;margin-bottom:10px;margin-top:10px">联系方式</text>
+<text class="i">地址：广西师范大学雁山校区</text>
+<text class="i">联系电话： 66666</text>
+<text class="i">商务合作： 6666@qq.com</text>
+</view>

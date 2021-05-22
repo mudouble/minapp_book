@@ -1,0 +1,106 @@
+
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back"></text>  
+</view>
+
+
+<view class="parts" style="height:100%" wx:for="{{art}}">
+  <view class="part1">
+   <view class="part1_title">
+    <text class="part1_title_text">{{item.title}}</text>
+   </view>
+   <view class="part1_small" style="display:flex; flex-direction:row;position:relative" >
+    <text class="part1_samll_text">共{{item.answer.length}}个讨论 • {{view}}浏览</text>
+    <view class="part1_small_img" style="position:absolute;right:66px;bottom:1rpx">
+       <image src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/写作.png" style="width:25px;height:25px"></image>       
+    </view>
+    <view class="part1_samll_text" style="display:flex;flex-direction:row;position:absolute;right:10px;color:#9370DB;" id="{{item._id}}" bindtap="talkjump">参与讨论</view>
+   </view>
+  </view>
+  <view class="seprate">
+<view class="secondpart" wx:for="{{item.answer}}"  wx:for-item="answer" data-idx="{{index}}" bindtap="selectid">
+  <view class="part2">
+    <view class="part21">
+      <view class="part21imgs">
+        <open-data type="userAvatarUrl" ></open-data></view>
+        <view class="part21text">
+        <open-data type="userNickName"></open-data></view>
+      </view>
+   </view>
+
+
+  <view class="part3">
+    <textarea class="part3_text">{{answer.content}}</textarea>
+    <view class="part3_samll">
+     <text>发布于{{answer.createTime}}</text>
+    </view>
+  </view>
+ 
+
+<view class="bottompart">
+    <view class="item" bindtap="thumsup" >
+       <image wx:if="{{answer.likes==true}}" class="img" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/三角形.png" catchtap="clickDianzan"  data-index="{{index}}" ></image>
+      <image wx:else class="img" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/三角形.png" bindtap="clickDianzan"  data-index="{{index}}" ></image>
+       <view class="num">{{answer.like}} • </view>
+    </view>
+    <view class="item">
+       <image class="img" wx:if="{{answer.collects==true}}" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/collect.png" bindtap="clickShoucang"  data-index="{{index}}"></image>
+       <image class="img" wx:else src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/收 藏 (2).png" bindtap="clickShoucang"  data-index="{{index}}"></image>
+       <view class="num">{{answer.collect}} • </view>
+    </view>
+    <view class="item" bindtap="show">
+       <image class="img" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/评论.png"></image>
+       <view class="num">{{answer.comments}}</view>
+    </view>
+  </view>
+</view>
+
+
+   
+
+</view>
+
+
+
+<view class="hide{{showView?'':'show'}}">  
+       <!--遮罩层  -->
+       <view class="shade">  
+           <!--面板内容  -->
+           <view class="conts">  
+           <view class="remarks">
+                <view class="remark_title" >
+                <!--右上角的关闭按钮（用于关闭整个conts)  -->  
+                  <image class="closeImg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/del.png" bindtap="close"></image> 
+                  <text style="position:relative;top:10rpx;font-size:18px;color:#aaa">共 {{comments.length}} 个讨论</text>
+              </view>
+              <view class="remark_line"></view>
+              <view class="remarkpart" wx:for="{{comments}}" wx:for-item="comments">
+                <view class="touxiang" style="position:relative;left:-40rpx;top:10px;width:40rpx;height:40rpx;border-radius:50%;margin-right:10rpx;">
+                  <open-data type="userAvatarUrl" ></open-data>
+                </view>
+                <view class="remark_content">
+                  <view class="remark_name" style="font-size:10px;">
+                    <open-data type="userNickName"></open-data>
+                  </view>
+                  <view class="content">
+                    <textarea>{{comments.content}}</textarea>
+                    <!-- <view style="font-size:10px;color:#aaa">{{comments.create_date}}</view> -->
+                  </view>
+                 
+                </view>
+
+              </view>
+              <!-- <view class="remark_bottom">
+                <text style="color:#aaa;font-size:14px">{{comments.create_date}}</text>
+                 <view  style="color:#aaa;font-size:14px;right:10px;position:absolute">{{comments.like}}</view> 
+              </view> -->
+        </view>
+        <view class="input">
+          <input placeholder="快来写下精彩评论" style="height:40px" bindinput="commentinput" class="in"></input>
+          <button class="sub" bindtap="submit">发布</button>
+        </view>
+           </view>   
+       </view>  
+   </view> 
+ </view>

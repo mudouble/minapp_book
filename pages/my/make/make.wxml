@@ -1,0 +1,26 @@
+<!--pages/my/make/make.wxml-->
+<view class="navtop">
+  <image class="navimg" src="cloud://books-lgy-o3riw.626f-books-lgy-o3riw-1302735412/img/icon-fanhui.png" bindtap="back"></image>
+  <text class="navtext" bindtap="back">我的创作</text>  
+</view>
+<view>
+  <open-data type="userAvatarUrl" style="height:150px;width:100%;z-index:10;position:absolute;filter:blur(5px)"></open-data>
+  <view style="left:90px;top:80px;z-index:11;position:absolute;display:flex;flex-Direction:row;margin-bottom:20px;">
+      <view>获赞总数</view>
+      <view style="width:20px"></view>
+      <view>创作总数</view>
+  </view>
+  <view style="left:105px;top:100px;z-index:11;position:absolute;display:flex;flex-Direction:row" >
+    <view>{{num1}}</view>
+     <view style="width:65px"></view>
+      <view >{{num2}}</view>
+  </view>
+</view>
+
+<view class="p1">
+  <view class="p2" wx:for="{{make}}" >
+    <view class="ptitle">{{item.title}}</view>
+    <view class="pconten">{{item.answer[0].content}}</view>
+    <view class="pwarn" bindtap="go" id="{{item._id}}">详细数据</view>
+  </view>
+</view>

@@ -1,0 +1,91 @@
+.p1{
+	padding-top: 67px;
+}
+
+.content{
+	/* padding-top: 67px; */
+	margin: 5px;
+}
+
+.icon-box{
+	height: 100px;
+	background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 2px solid #eee;
+	box-shadow: 0 2px 5px #eeeeee;
+}
+.icon{
+	float: left;
+	/* margin: 88rpx 20rpx; */
+	padding-top: 88rpx;
+	padding-left: 20rpx;
+}
+.left-imge{
+	float: left;
+}
+.addcart-image{
+	width: 170rpx;
+ height: 170rpx;
+ float: left;
+ padding: 10rpx;
+}
+.left-detail{
+	float: left;margin-top: 20rpx;line-height: 60rpx;margin-left: 10rpx;
+}
+.cart-title{
+	margin-top: 24rpx;font-size: 32rpx;font-weight: bold;
+}
+.cart-price{
+ display: flex;color:#f00;font-size: 30rpx;
+}
+.input{
+	display: block;width: 65rpx;
+	height: 70rpx;line-height: 70rpx;
+	text-align: center;float: left;
+}
+.cart-amout{
+	width: rpx;background: #f4f4f4;font-size: 30rpx;
+}
+.right image{
+	width: 52rpx;height: 52rpx;
+	float: right;margin-right: 34rpx;
+	margin-top: 34rpx;
+}
+.total-bottom{
+	position: fixed;width: 100%;
+	height: 86rpx;bottom:0;
+	background: white;
+}
+.cart-icon{
+	margin: 15rpx 22rpx;float: left;
+}
+.checked-all{
+	line-height: 90rpx;font-size: 36rpx;
+}
+/* 合计 */
+.cart-total{
+	width: 300rpx;height: 100%;
+	line-height: 86rpx;
+	float: right;text-align:center;
+	margin-top: 130rpx; 
+}
+.clear-cart{
+	float: right;width: 230rpx;
+}
+.clear-text{
+	display: block;line-height: 87rpx;text-align: center;
+	font-size:36rpx;color:white;background:#9b95c9;
+}
+.pay{
+ display: block;line-height: 87rpx;text-align: center;
+ font-size:36rpx;
+ color:white;
+ background: #f00;
+}
+/* 合计 */
+.total-color{
+ color: #f00;font-size: 36rpx;
+}
+.total-text{
+ font-size: 36rpx;
+}

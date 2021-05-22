@@ -1,0 +1,24 @@
+/* pages/share/talks/talks.wxss */
+
+.title{
+  margin-top:67px;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.titletext{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.content{
+  padding: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.contenttext{
+  width: 100%;
+  background: #F8F8F8;
+  height: 500px;
+  letter-spacing: 2rpx;
+  line-height: 2px;
+  
+}
